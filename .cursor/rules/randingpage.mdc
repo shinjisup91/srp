@@ -1,0 +1,30 @@
+---
+title: S.R&P Landing Rules
+alwaysApply: true
+---
+
+[규칙-네비게이션]
+- 상단바(topbar) 고정. 메뉴는 hover+focus로 열림, 클릭 이동.
+- 드롭다운: hover intent(enterDelay 120~200ms, leaveDelay 200~300ms).
+- 메뉴 안에 포커스가 있으면 닫지 않음. Esc/바깥클릭 닫기. 모바일(md 미만)은 클릭/토글.
+
+[규칙-라우팅]
+- 홈(/)은 히어로만 노출. 나머지 콘텐츠는 상단 메뉴 CTA로 개별 페이지에서만 노출.
+- 필수 라우트: /about, /about/vision, /about/brand, /about/ceo, /arss, /arss/system, /arss/br-tr, /contact
+- 앵커(#) 금지. 반드시 <Link> 페이지 라우팅.
+
+[규칙-레이아웃]
+- (있을 때) 섹션 순서: Hero → Quick Overview(3카드) → Stats(4지표) → CTA.
+- container + px-4 sm:px-6 lg:px-8, 세로 리듬 py-20, Hero pt-32 pb-20 + min-h-screen.
+- 그리드: Hero 2cols gap-12 / Overview 3cols(md~) gap-8 / Stats 4cols(md~) gap-8.
+- 타이포: H1 4xl/5xl/6xl, H2 3xl/4xl, Body text-lg.
+- 컬러: 각 프롬포트에 지정한 컬러러 또는 var(--accent), 모노크롬. **아이콘 금지**, 각 라우트 풀폭 배경 이미지(중복 OK).
+- 모든 문구/라벨/입출력은 한국어.
+
+[접근성]
+- 메뉴 내부 포커스 유지 시 닫지 않음. 첫/마지막 항목 탭 이동 시 자연 닫힘.
+- Esc, 바깥클릭 닫기.
+
+[구현 고정]
+- 드롭다운은 useHoverIntent 훅(enter 160ms / leave 240ms) + focus 유지 + Esc/바깥클릭 닫기 사용.
+- 홈(/)은 히어로 단일 섹션만.
