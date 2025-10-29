@@ -98,7 +98,7 @@ export default function AboutPage() {
               숫자로 보는 S.R&P
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-              신뢰할 수 있는 실적과 성과
+              신뢰할 수 있는 성과를 위한 목표
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
