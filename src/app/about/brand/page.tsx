@@ -86,7 +86,7 @@ export default function BrandPage() {
             />
 
             <CardWithImage
-              imageUrl="https://images.unsplash.com/photo-1498550744921-75f79806b163?w=800&q=80"
+              imageUrl="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80"
               title="비주얼 아이덴티티"
               description="열기구를 통해 동심의 향수를 일으킵니다"
             />
