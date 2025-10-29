@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function VisionPage() {
   return (
@@ -57,20 +57,20 @@ export default function VisionPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129671/3129671-sd-960x506-25fps.mp4"
-              title="혁신 Innovation"
-              description="끊임없는 연구개발로 업계를 선도하는 기술 혁신을 이뤄냅니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=800&q=80"
+              title="개성"
+              description="고객 맞춤형 솔루션으로 각 매장의 독특한 개성을 살립니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129840/3129840-sd-960x506-25fps.mp4"
-              title="신뢰 Trust"
-              description="고객과의 약속을 지키며 신뢰를 바탕으로 함께 성장합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80"
+              title="비대면"
+              description="비대면 서비스로 안전하고 효율적인 매장 운영을 실현합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129957/3129957-sd-960x506-25fps.mp4"
-              title="상생 Mutual Growth"
-              description="고객의 성공이 곧 우리의 성공이라는 믿음으로 함께 발전합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"
+              title="자동화"
+              description="첨단 자동화 기술로 인건비를 절감하고 서비스 품질을 높입니다"
             />
           </div>
         </div>
