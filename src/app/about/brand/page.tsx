@@ -31,10 +31,10 @@ export default function BrandPage() {
                 우리의 정체성을 담은 브랜드 스토리를 소개합니다
               </p>
             </div>
-            <div className="hidden md:block">
-              <div className="rounded-2xl overflow-hidden shadow-2xl bg-black p-12 flex items-center justify-center"
+            <div className="mt-8 md:mt-0">
+              <div className="rounded-2xl overflow-hidden shadow-2xl bg-black p-8 md:p-12 flex items-center justify-center"
                 style={{
-                  height: "500px",
+                  height: "400px",
                 }}
               >
                 <Image

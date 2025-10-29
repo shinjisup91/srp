@@ -61,8 +61,8 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <div className="mt-8 md:mt-0">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
                 <h2 className="text-2xl font-bold text-white mb-6">
                   무료 상담 신청
                 </h2>

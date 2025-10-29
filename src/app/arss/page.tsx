@@ -44,14 +44,14 @@ export default function ARSSPage() {
                 </Link>
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="mt-8 md:mt-0">
               <div
                 className="rounded-2xl overflow-hidden shadow-2xl"
                 style={{
                   backgroundImage: "url(https://picsum.photos/600/700?random=51)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  height: "500px",
+                  height: "400px",
                 }}
               ></div>
             </div>

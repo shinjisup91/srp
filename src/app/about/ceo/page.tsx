@@ -31,8 +31,8 @@ export default function CEOPage() {
                 고객의 소리를 듣고 편히 쉬어 갈 수 있는 정거장이 되겠습니다. 감사합니다.
               </p>
             </div>
-            <div className="hidden md:block">
-              <div className="rounded-2xl overflow-hidden shadow-2xl relative" style={{ height: "500px" }}>
+            <div className="mt-8 md:mt-0">
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative" style={{ height: "400px" }}>
                 <Image
                   src="/대표사진 신지섭.jpg"
                   alt="대표이사 신지섭"
