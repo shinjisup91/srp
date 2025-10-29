@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function BrandPage() {
   return (
@@ -79,32 +79,16 @@ export default function BrandPage() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div
-                className="h-48 flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg, #3fb1d3 0%, #2f9bb3 100%)",
-                }}
-              >
-                <div className="text-white text-center">
-                  <div className="text-2xl font-bold mb-2">#3fb1d3</div>
-                  <div className="text-lg">Primary Blue</div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-black dark:text-white mb-3">
-                  브랜드 컬러
-                </h3>
-                <p className="text-zinc-600 dark:text-zinc-400">
-                새벽을 상징하는 네이비, 노을을 상징하는 오렌지를 사용합니다 
-                </p>
-              </div>
-            </div>
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800&q=80"
+              title="브랜드 컬러"
+              description="새벽을 상징하는 네이비, 노을을 상징하는 오렌지를 사용합니다"
+            />
 
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3130284/3130284-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1498550744921-75f79806b163?w=800&q=80"
               title="비주얼 아이덴티티"
-              description="열기구를 통해 동심의 향수를 일으킵니다."
+              description="열기구를 통해 동심의 향수를 일으킵니다"
             />
           </div>
         </div>
