@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function AboutPage() {
   return (
@@ -71,20 +71,20 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129671/3129671-sd-960x506-25fps.mp4"
-              title="첨단 기술"
-              description="최신 자동화 기술과 AI를 접목하여 완벽한 서빙 시스템을 구현합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+              title="맞춤형 인테리어"
+              description="각 매장의 콘셉트와 분위기에 맞춘 최적화된 레일 시스템 설치"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129840/3129840-sd-960x506-25fps.mp4"
-              title="검증된 솔루션"
-              description="다양한 업장에서 검증된 안정적이고 효율적인 솔루션을 제공합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+              title="이색적인 고객경험"
+              description="레일 서빙 시스템으로 재미있고 특별한 경험을 선사합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129957/3129957-sd-960x506-25fps.mp4"
-              title="맞춤형 서비스"
-              description="각 매장의 특성에 맞춘 최적화된 맞춤형 솔루션을 제안합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+              title="편리한 자동화 서비스"
+              description="터치 한 번으로 간편하게 주문하고 자동으로 서빙받는 스마트한 시스템"
             />
           </div>
         </div>

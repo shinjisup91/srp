@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function BRTRPage() {
   return (
@@ -71,20 +71,20 @@ export default function BRTRPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/2611250/2611250-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80"
               title="안정적 운반"
               description="진동 방지 시스템으로 음료를 흘리지 않고 안전하게 운반합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3141211/3141211-sd-960x506-25fps.mp4"
-              title="대용량 적재"
-              description="한 번에 여러 테이블의 주문을 동시에 서빙할 수 있습니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80"
+              title="테이블 수에 맞는 개체수"
+              description="매장의 테이블 수와 레이아웃에 최적화된 BR-TR 개체수 배치"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129840/3129840-sd-960x506-25fps.mp4"
-              title="자동 회수"
-              description="빈 잔과 그릇을 자동으로 회수하여 테이블을 깨끗하게 유지합니다"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80"
+              title="이색적인 경험"
+              description="레일 위를 달리는 BR-TR로 고객에게 특별한 재미와 경험을 제공합니다"
             />
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function BRTRPage() {
               BR-TR 성능
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-              검증된 성능 지표
+              성능 지표 목표
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">

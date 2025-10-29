@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function SystemPage() {
   return (
@@ -71,18 +71,18 @@ export default function SystemPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/2611250/2611250-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1581092160607-ee67d44c8dad?w=800&q=80"
               title="레일 시스템"
               description="정밀하게 설계된 레일 트랙으로 모든 테이블에 정확하게 서빙합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129840/3129840-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80"
               title="제어 시스템"
               description="스마트 제어 장치로 실시간 모니터링과 최적 경로 설정이 가능합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129671/3129671-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
               title="통합 플랫폼"
               description="POS, 주방, 서빙을 하나로 연결하는 통합 관리 플랫폼을 제공합니다"
             />

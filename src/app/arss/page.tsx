@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function ARSSPage() {
   return (
@@ -71,18 +71,18 @@ export default function ARSSPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3141211/3141211-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"
               title="자동 서빙"
               description="레일 시스템을 통한 정확하고 신속한 자동 서빙으로 인건비를 절감합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129840/3129840-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
               title="실시간 모니터링"
               description="매장 전체를 한눈에 파악하고 효율적으로 관리할 수 있습니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3129671/3129671-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&q=80"
               title="스마트 통합"
               description="POS 시스템과 완벽하게 연동되어 주문부터 서빙까지 자동화합니다"
             />
@@ -98,7 +98,7 @@ export default function ARSSPage() {
               ARSS 도입 효과
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-              실제 측정된 도입 효과
+              측정된 도입 효과 목표
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">

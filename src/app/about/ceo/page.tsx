@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import VideoBackground from "@/components/VideoBackground";
-import CardWithVideo from "@/components/CardWithVideo";
+import CardWithImage from "@/components/CardWithImage";
 
 export default function CEOPage() {
   return (
@@ -58,18 +58,18 @@ export default function CEOPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3196085/3196085-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
               title="고객 최우선"
               description="고객의 성공이 곧 우리의 성공입니다. 고객 가치 창출에 모든 역량을 집중합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3196548/3196548-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
               title="지속적 혁신"
               description="현재에 안주하지 않고 끊임없이 혁신하며 미래를 준비합니다"
             />
-            <CardWithVideo
-              videoUrl="https://videos.pexels.com/video-files/3130284/3130284-sd-960x506-25fps.mp4"
+            <CardWithImage
+              imageUrl="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
               title="사회적 책임"
               description="기업의 사회적 책임을 다하며 지속 가능한 성장을 추구합니다"
             />
