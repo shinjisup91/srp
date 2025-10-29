@@ -26,7 +26,7 @@ export default function BrandPage() {
                 브랜드 아이덴티티
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                S.R&P 브랜드는 기술과 혁신, 그리고 신뢰를 상징합니다
+                S.R&P 브랜드는 기술과 개성, 그리고 편의성을 상징합니다
                 <br />
                 우리의 정체성을 담은 브랜드 스토리를 소개합니다
               </p>
@@ -74,7 +74,7 @@ export default function BrandPage() {
                   로고타입
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-400">
-                  간결하면서도 강렬한 로고타입으로 브랜드의 전문성을 표현합니다
+                  '나'라는 정거장에 '행복'을 배달해 드립니다                
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function BrandPage() {
                   브랜드 컬러
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-400">
-                  신뢰와 혁신을 상징하는 시그니처 블루 컬러를 사용합니다
+                새벽을 상징하는 네이비, 노을을 상징하는 오렌지를 사용합니다 
                 </p>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function BrandPage() {
             <CardWithVideo
               videoUrl="https://videos.pexels.com/video-files/3130284/3130284-sd-960x506-25fps.mp4"
               title="비주얼 아이덴티티"
-              description="깔끔하고 현대적인 디자인으로 기술 중심의 이미지를 전달합니다"
+              description="열기구를 통해 동심의 향수를 일으킵니다."
             />
           </div>
         </div>
@@ -127,10 +127,10 @@ export default function BrandPage() {
                 Simple
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                단순함
+                개성
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                본질에 집중하는 디자인
+                단순함
               </div>
             </div>
             <div className="text-center p-6">
@@ -138,10 +138,10 @@ export default function BrandPage() {
                 Modern
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                현대적
+                포근함
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                시대를 앞서가는 감각
+                깔끔함
               </div>
             </div>
             <div className="text-center p-6">

@@ -35,7 +35,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">전화 문의</h3>
-                    <p className="text-white/80">02-1234-5678</p>
+                    <p className="text-white/80">010-5401-0732</p>
                     <p className="text-white/60 text-sm">평일 09:00 - 18:00</p>
                   </div>
                 </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">이메일</h3>
-                    <p className="text-white/80">info@srp.com</p>
+                    <p className="text-white/80">shinji9112@gmail.com</p>
                     <p className="text-white/60 text-sm">24시간 접수 가능</p>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-white font-bold mb-1">본사 위치</h3>
                     <p className="text-white/80">서울특별시 강남구</p>
-                    <p className="text-white/60 text-sm">테헤란로 123</p>
+                    <p className="text-white/60 text-sm">헌릉로 590길 11</p>
                   </div>
                 </div>
               </div>

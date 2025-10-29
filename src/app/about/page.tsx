@@ -126,13 +126,13 @@ export default function AboutPage() {
             </div>
             <div className="text-center p-6">
               <div className="text-5xl font-bold text-[var(--accent)] mb-2">
-                10년
+                신생
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                업계 경력
+                신생 기업
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                풍부한 경험과 노하우
+                새로운 혁신의 시작
               </div>
             </div>
             <div className="text-center p-6">

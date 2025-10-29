@@ -26,9 +26,9 @@ export default function CEOPage() {
                 <span className="text-[var(--accent)]">대표이사 인사말</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                안녕하십니까, S.R&P 대표이사입니다
+                안녕하십니까, S.R&P 대표이사 신지섭 입니다.
                 <br />
-                기술로 세상을 바꾸는 꿈을 함께 만들어가겠습니다
+                고객의 소리를 듣고 편히 쉬어 갈 수 있는 정거장이 되겠습니다. 감사합니다.
               </p>
             </div>
             <div className="hidden md:block">
@@ -94,7 +94,7 @@ export default function CEOPage() {
                 Vision
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                비전
+                편의성성
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
                 명확한 방향 제시
