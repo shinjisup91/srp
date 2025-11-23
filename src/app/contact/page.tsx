@@ -5,21 +5,43 @@ import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
 import CardWithVideo from "@/components/CardWithVideo";
 import { useState, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setShowPopup(true);
-    
-    // 3초 후 팝업 자동 닫기
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 3000);
-    
-    // 폼 리셋
-    e.currentTarget.reset();
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS로 이메일 전송
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        e.currentTarget,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      console.log("이메일 전송 성공:", result.text);
+      
+      // 성공 팝업 표시
+      setShowPopup(true);
+      
+      // 3초 후 팝업 자동 닫기
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+      
+      // 폼 리셋
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error("이메일 전송 실패:", error);
+      alert("문의 전송에 실패했습니다. 다시 시도해주세요.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,6 +138,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="user_name"
                       placeholder="홍길동"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
@@ -127,6 +150,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="tel"
+                      name="user_phone"
                       placeholder="010-1234-5678"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
@@ -138,6 +162,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
+                      name="user_email"
                       placeholder="example@email.com"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
@@ -149,6 +174,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="store_name"
                       placeholder="매장 이름을 입력해주세요"
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
@@ -158,6 +184,7 @@ export default function ContactPage() {
                       문의 내용 *
                     </label>
                     <textarea
+                      name="message"
                       placeholder="문의하실 내용을 자세히 입력해주세요"
                       rows={4}
                       required
@@ -166,9 +193,10 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
+                    disabled={isSubmitting}
+                    className="w-full px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    상담 신청하기
+                    {isSubmitting ? "전송 중..." : "상담 신청하기"}
                   </button>
                   <p className="text-white/60 text-sm text-center">
                     제출하신 정보는 상담 목적으로만 사용됩니다
