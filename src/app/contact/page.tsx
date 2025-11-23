@@ -1,12 +1,55 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
 import CardWithVideo from "@/components/CardWithVideo";
+import { useState, FormEvent } from "react";
 
 export default function ContactPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setShowPopup(true);
+    
+    // 3초 후 팝업 자동 닫기
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+    
+    // 폼 리셋
+    e.currentTarget.reset();
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <Navbar />
+      
+      {/* 팝업 모달 */}
+      {showPopup && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="bg-white dark:bg-[#15273D] rounded-2xl p-8 shadow-2xl max-w-md mx-4 border-2 border-[#E4C58B]/50">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">✓</span>
+              </div>
+              <h3 className="text-2xl font-bold text-black dark:text-white mb-3">
+                상담 신청 완료
+              </h3>
+              <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
+                최대한 빠르게 확인 후<br />연락드리겠습니다. 감사합니다.
+              </p>
+              <button
+                onClick={() => setShowPopup(false)}
+                className="px-8 py-3 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-lg transition-all font-bold"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen pt-32 pb-20 overflow-hidden">
@@ -66,7 +109,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-white mb-6">
                   무료 상담 신청
                 </h2>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-white mb-2 text-sm font-medium">
                       이름 *
@@ -74,6 +117,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="홍길동"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
@@ -84,6 +128,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       placeholder="010-1234-5678"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
@@ -94,6 +139,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       placeholder="example@email.com"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
@@ -114,6 +160,7 @@ export default function ContactPage() {
                     <textarea
                       placeholder="문의하실 내용을 자세히 입력해주세요"
                       rows={4}
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-white/90 dark:bg-black/50 text-black dark:text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     ></textarea>
                   </div>
@@ -301,7 +348,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">
               무료 상담 신청
             </h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-black dark:text-white mb-2 text-sm font-medium">
                   이름 *
@@ -309,6 +356,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   placeholder="홍길동"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 />
               </div>
@@ -319,6 +367,7 @@ export default function ContactPage() {
                 <input
                   type="tel"
                   placeholder="010-1234-5678"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 />
               </div>
@@ -329,6 +378,7 @@ export default function ContactPage() {
                 <input
                   type="email"
                   placeholder="example@email.com"
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 />
               </div>
@@ -349,6 +399,7 @@ export default function ContactPage() {
                 <textarea
                   placeholder="문의하실 내용을 자세히 입력해주세요"
                   rows={4}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white dark:bg-zinc-900 text-black dark:text-white border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                 ></textarea>
               </div>
