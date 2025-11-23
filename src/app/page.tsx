@@ -26,7 +26,7 @@ export default function Home() {
                 <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">S.R&P</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                Automated Rail Serving System으로
+                Automated Rail-based Serving System으로
                 <br />
                 주점 운영의 새로운 패러다임을 경험하세요
               </p>

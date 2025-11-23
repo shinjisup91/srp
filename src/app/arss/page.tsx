@@ -25,7 +25,7 @@ export default function ARSSPage() {
                 서비스란?
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                Automated Rail Serving System
+                Automated Rail-based Serving System
                 <br />
                 레일 기반 자동화 서빙 솔루션으로 매장 운영을 혁신합니다
               </p>

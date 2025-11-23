@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "S.R&P - 비대면 자동화 서빙 시스템",
-  description: "Automated Rail Serving System으로 주점 운영의 새로운 패러다임을 경험하세요",
+  description: "Automated Rail-based Serving System으로 주점 운영의 새로운 패러다임을 경험하세요",
 };
 
 export default function RootLayout({
