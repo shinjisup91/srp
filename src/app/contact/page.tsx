@@ -28,21 +28,21 @@ export default function ContactPage() {
       
       {/* 팝업 모달 */}
       {showPopup && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="bg-white dark:bg-[#15273D] rounded-2xl p-8 shadow-2xl max-w-md mx-4 border-2 border-[#E4C58B]/50">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="bg-white dark:bg-[#15273D] rounded-2xl p-6 sm:p-8 shadow-2xl w-full max-w-md border-2 border-[#E4C58B]/50 animate-[fadeIn_0.3s_ease-in-out]">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">✓</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <span className="text-3xl text-[#15273D]">✓</span>
               </div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3">
                 상담 신청 완료
               </h3>
-              <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
+              <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 mb-6 leading-relaxed">
                 최대한 빠르게 확인 후<br />연락드리겠습니다. 감사합니다.
               </p>
               <button
                 onClick={() => setShowPopup(false)}
-                className="px-8 py-3 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-lg transition-all font-bold"
+                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-xl hover:shadow-[#FFA36C]/50 transition-all font-bold"
               >
                 확인
               </button>
