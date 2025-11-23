@@ -15,13 +15,13 @@ export default function BrandPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-full mb-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
                 Brand Identity
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 혁신의 상징
                 <br />
-                <span className="text-[var(--accent)]">S.R&P</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">S.R&P</span>
                 <br />
                 브랜드 아이덴티티
               </h1>
@@ -38,7 +38,7 @@ export default function BrandPage() {
                 }}
               >
                 <Image
-                  src="/S.R&P 로고2.png"
+                  src="/S.R&P 로고.png"
                   alt="S.R&P 로고"
                   width={600}
                   height={500}
@@ -65,9 +65,9 @@ export default function BrandPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div
-                className="h-48 bg-gradient-to-br from-[var(--accent)] to-[#2f9bb3] flex items-center justify-center"
+                className="h-48 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center"
               >
-                <div className="text-6xl font-bold text-white">S.R&P</div>
+                <div className="text-6xl font-bold text-[#15273D]">S.R&P</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-black dark:text-white mb-3">
@@ -107,7 +107,7 @@ export default function BrandPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Simple
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -118,7 +118,7 @@ export default function BrandPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Modern
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -129,7 +129,7 @@ export default function BrandPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Trust
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -140,7 +140,7 @@ export default function BrandPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Tech
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -176,7 +176,7 @@ export default function BrandPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
             >
               문의하기
             </Link>

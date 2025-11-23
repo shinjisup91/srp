@@ -15,7 +15,7 @@ export default function CEOPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-full mb-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
                 CEO Message
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -23,7 +23,7 @@ export default function CEOPage() {
                 <br />
                 도전과 혁신
                 <br />
-                <span className="text-[var(--accent)]">대표이사 인사말</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">대표이사 인사말</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 안녕하십니까, S.R&P 대표이사 신지섭 입니다.
@@ -90,7 +90,7 @@ export default function CEOPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Vision
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -101,7 +101,7 @@ export default function CEOPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Passion
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -112,7 +112,7 @@ export default function CEOPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Integrity
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -123,7 +123,7 @@ export default function CEOPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 Teamwork
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -159,7 +159,7 @@ export default function CEOPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
             >
               문의하기
             </Link>

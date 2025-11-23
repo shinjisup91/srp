@@ -13,7 +13,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-full mb-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
                 비대면 자동화 서빙 시스템
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -23,7 +23,7 @@ export default function Home() {
                 <br />
                 제공하는
                 <br />
-                <span className="text-[var(--accent)]">S.R&P</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">S.R&P</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 Automated Rail Serving System으로
@@ -33,13 +33,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/about"
-                  className="px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                  className="px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
                 >
                   더 알아보기
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/20 transition-colors text-lg font-medium border border-white/30"
+                  className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/10 transition-all duration-300 text-lg font-medium border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]"
                 >
                   무료 상담 신청
                 </Link>

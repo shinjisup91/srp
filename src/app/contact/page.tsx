@@ -14,13 +14,13 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-full mb-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
                 Contact Us
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 언제든
                 <br />
-                <span className="text-[var(--accent)]">문의</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">문의</span>
                 해주세요
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
@@ -30,8 +30,8 @@ export default function ContactPage() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">📞</span>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <span className="text-[#15273D] font-bold">📞</span>
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">전화 문의</h3>
@@ -40,8 +40,8 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">✉️</span>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <span className="text-[#15273D] font-bold">✉️</span>
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">이메일</h3>
@@ -50,8 +50,8 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--accent)] flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">📍</span>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <span className="text-[#15273D] font-bold">📍</span>
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-1">본사 위치</h3>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-[var(--accent)] text-white rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
                   >
                     상담 신청하기
                   </button>
@@ -147,9 +147,9 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div
-                className="h-48 bg-gradient-to-br from-[var(--accent)] to-[#2f9bb3] flex items-center justify-center"
+                className="h-48 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center"
               >
-                <div className="text-6xl font-bold text-white">1</div>
+                <div className="text-6xl font-bold text-[#15273D]">1</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-black dark:text-white mb-3">
@@ -163,9 +163,9 @@ export default function ContactPage() {
 
             <div className="bg-white dark:bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div
-                className="h-48 bg-gradient-to-br from-[var(--accent)] to-[#2f9bb3] flex items-center justify-center"
+                className="h-48 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center"
               >
-                <div className="text-6xl font-bold text-white">2</div>
+                <div className="text-6xl font-bold text-[#15273D]">2</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-black dark:text-white mb-3">
@@ -179,9 +179,9 @@ export default function ContactPage() {
 
             <div className="bg-white dark:bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div
-                className="h-48 bg-gradient-to-br from-[var(--accent)] to-[#2f9bb3] flex items-center justify-center"
+                className="h-48 bg-gradient-to-br from-[#E4C58B] to-[#FFA36C] flex items-center justify-center"
               >
-                <div className="text-6xl font-bold text-white">3</div>
+                <div className="text-6xl font-bold text-[#15273D]">3</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-black dark:text-white mb-3">
@@ -209,7 +209,7 @@ export default function ContactPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 24시간
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -220,7 +220,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 무료
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -231,7 +231,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 7일
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -242,7 +242,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 A/S
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -279,13 +279,13 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/about"
-                className="px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                className="px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
               >
                 회사소개
               </Link>
               <Link
                 href="/arss"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/20 transition-colors text-lg font-medium border border-white/30"
+                className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/10 transition-all duration-300 text-lg font-medium border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]"
               >
                 ARSS 서비스
               </Link>
@@ -354,7 +354,7 @@ export default function ContactPage() {
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-[var(--accent)] text-white rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                className="w-full px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
               >
                 상담 신청하기
               </button>

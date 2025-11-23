@@ -114,19 +114,19 @@ export default function SystemPage() {
                 <div className="space-y-3">
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
                     <div className="font-bold text-white text-sm mb-1">Client 1 - 주문</div>
-                    <p className="text-xs text-white/60">태블릿 메뉴 주문</p>
+                    <p className="text-xs text-white/60">QR/Web 기반 주문</p>
                   </div>
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
-                    <div className="font-bold text-white text-sm mb-1">Client 2 - 조리</div>
-                    <p className="text-xs text-white/60">주방 디스플레이 시스템</p>
+                    <div className="font-bold text-white text-sm mb-1">Client 2 - 자판기</div>
+                    <p className="text-xs text-white/60">음료 자동 배출</p>
                   </div>
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
-                    <div className="font-bold text-white text-sm mb-1">Client 3 - 서빙</div>
-                    <p className="text-xs text-white/60">레일 자동 서빙</p>
+                    <div className="font-bold text-white text-sm mb-1">Client 3 - 디스펜서</div>
+                    <p className="text-xs text-white/60">생맥주 자동 제공</p>
                   </div>
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
-                    <div className="font-bold text-white text-sm mb-1">Client 4 - 정산</div>
-                    <p className="text-xs text-white/60">셀프 결제 키오스크</p>
+                    <div className="font-bold text-white text-sm mb-1">Client 4 - 레일</div>
+                    <p className="text-xs text-white/60">Balloon Rail 서빙</p>
                   </div>
                 </div>
               </div>
@@ -164,12 +164,12 @@ export default function SystemPage() {
                 </div>
                 <div className="space-y-4">
                   <div className="bg-[#15273D]/50 rounded-lg p-4 border border-[#E4C58B]/10">
-                    <div className="font-bold text-white mb-2">통신 게이트웨이</div>
+                    <div className="font-bold text-white mb-2">물리적 연결 허브</div>
                     <ul className="space-y-1 text-xs text-white/70">
-                      <li>• 클라이언트-서버 중계</li>
-                      <li>• 프로토콜 변환</li>
-                      <li>• 부하 분산</li>
-                      <li>• 보안 계층 관리</li>
+                      <li>• C2→C3→C4 컨베이어/브릿지</li>
+                      <li>• 데이터 전달 및 배차 연결</li>
+                      <li>• 프로토콜 변환, 부하 분산</li>
+                      <li>• 명령 중계 레이어</li>
                     </ul>
                   </div>
                 </div>
@@ -178,14 +178,15 @@ export default function SystemPage() {
 
             {/* Flow Arrow Indicator */}
             <div className="mt-12 text-center">
-              <div className="inline-flex items-center gap-4 text-white/50 text-sm">
-                <span>주문</span>
-                <span>→</span>
-                <span>조리</span>
-                <span>→</span>
-                <span>서빙</span>
-                <span>→</span>
-                <span>정산</span>
+              <div className="inline-flex flex-col gap-2 text-white/50 text-sm">
+                <div className="flex items-center gap-4 justify-center">
+                  <span className="text-[#E4C58B] font-bold">기본 순환:</span>
+                  <span>C1 → C2 → C3 → C4</span>
+                </div>
+                <div className="flex items-center gap-4 justify-center text-xs">
+                  <span className="text-[#FFA36C] font-bold">상세 순환:</span>
+                  <span>C1 → CS → C2 → CB → C3 → CB → C4</span>
+                </div>
               </div>
             </div>
           </div>
@@ -217,15 +218,15 @@ export default function SystemPage() {
                 <div className="w-2 h-2 rounded-full bg-[#E4C58B] group-hover:animate-pulse"></div>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E4C58B] transition-colors">
-                Client 1 - 주문
+                Client 1 - 테이블 주문 시스템
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
-                각 테이블의 태블릿 메뉴판으로 고객이 직접 주문하고 추가 주문도 자유롭게 가능합니다
+                고객 QR/Web 기반 주문으로 메뉴 선택부터 결제까지 간편하게 처리합니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• 직관적인 터치 인터페이스</li>
-                <li>• 실시간 메뉴 업데이트</li>
-                <li>• 다국어 지원</li>
+                <li>• 메뉴 선택, 옵션, 요청사항 입력</li>
+                <li>• 기본 결제 (전체/인원수 분할)</li>
+                <li>• 주문 진행상황 UI & C4BR 번호 표시</li>
               </ul>
             </div>
 
@@ -238,15 +239,15 @@ export default function SystemPage() {
                 <div className="w-2 h-2 rounded-full bg-[#E4C58B] group-hover:animate-pulse"></div>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E4C58B] transition-colors">
-                Client 2 - 조리
+                Client 2 - 음료 자동 자판기 시스템
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
-                주방 디스플레이 시스템(KDS)으로 주문을 실시간 확인하고 조리 상태를 관리합니다
+                병/캔/병음료를 자동으로 배출하여 CB 시작점까지 전달합니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• 주문 우선순위 자동 정렬</li>
-                <li>• 조리 시간 타이머</li>
-                <li>• 알림 및 알람 기능</li>
+                <li>• C1/CS 주문 정보 기반 자동 동작</li>
+                <li>• 다양한 음료 타입 지원</li>
+                <li>• 잔/음료 자동 전달</li>
               </ul>
             </div>
 
@@ -259,15 +260,15 @@ export default function SystemPage() {
                 <div className="w-2 h-2 rounded-full bg-[#FFA36C] group-hover:animate-pulse"></div>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FFA36C] transition-colors">
-                Client 3 - 서빙 ★
+                Client 3 - 생맥주 자동 디스펜서 시스템 ★
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
-                레일 시스템을 통한 자동 서빙. ARSS의 핵심 기술이 집약된 모듈입니다
+                잔 감지 센서 기반으로 자동 디스펜싱하여 C4 적재 위치로 전달합니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• C4BR 서스펜디드 레일</li>
-                <li>• 정밀 위치 제어 (±1cm)</li>
-                <li>• 최대 15kg 적재</li>
+                <li>• 호시자키 디스펜서 API 연동</li>
+                <li>• 자동 잔 감지 및 디스펜싱</li>
+                <li>• 완성된 잔 자동 전달</li>
               </ul>
             </div>
 
@@ -279,16 +280,16 @@ export default function SystemPage() {
                 </div>
                 <div className="w-2 h-2 rounded-full bg-[#E4C58B] group-hover:animate-pulse"></div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E4C58B] transition-colors">
-                Client 4 - 정산
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FFA36C] transition-colors">
+                Client 4 - Balloon Rail / Serving Unit ★
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
-                셀프 결제 키오스크로 빠르고 편리한 계산 프로세스를 제공합니다
+                천장/타워/벽걸이형 순환 레일 위를 이동하는 BU/BR로 테이블 앞 정밀 정차합니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• 카드/현금/QR 결제</li>
-                <li>• 영수증 자동 발행</li>
-                <li>• POS 시스템 연동</li>
+                <li>• 속도 제어 / 정차 포인트 / 위치 추적</li>
+                <li>• 센서 기반 정밀 제어</li>
+                <li>• LED·광고·이벤트 모듈 탑재 가능</li>
               </ul>
             </div>
 
@@ -322,15 +323,15 @@ export default function SystemPage() {
                 <div className="w-2 h-2 rounded-full bg-[#E4C58B] group-hover:animate-pulse"></div>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E4C58B] transition-colors">
-                Client Bridge
+                Client Bridge - 클라이언트 간 연결 허브
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
-                클라이언트와 서버 사이의 통신을 중계하고 최적화하는 브리지 모듈입니다
+                C2 → C3 → C4 구간을 물리적으로 연결하는 컨베이어/브릿지입니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• 안정적인 네트워크 중계</li>
-                <li>• 프로토콜 변환</li>
-                <li>• 보안 계층 암호화</li>
+                <li>• 데이터 전달 및 배차 연결</li>
+                <li>• 프로토콜 변환, 부하 분산</li>
+                <li>• C1/CS 명령을 물리 모듈에 전달</li>
               </ul>
             </div>
           </div>

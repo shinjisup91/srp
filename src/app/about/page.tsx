@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-full mb-6">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
                 About Us
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -22,7 +22,7 @@ export default function AboutPage() {
                 <br />
                 미래를 만드는
                 <br />
-                <span className="text-[var(--accent)]">S.R&P</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">S.R&P</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 S.R&P는 비대면 자동화 서빙 시스템의 선두주자로서
@@ -32,13 +32,13 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/about/vision"
-                  className="px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                  className="px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
                 >
                   회사이념 보기
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/20 transition-colors text-lg font-medium border border-white/30"
+                  className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/10 transition-all duration-300 text-lg font-medium border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]"
                 >
                   문의하기
                 </Link>
@@ -103,7 +103,7 @@ export default function AboutPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 500+
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -114,7 +114,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 95%
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -125,7 +125,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 신생
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -136,7 +136,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="text-center p-6">
-              <div className="text-5xl font-bold text-[var(--accent)] mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
                 24/7
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
@@ -173,13 +173,13 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/about/vision"
-                className="px-8 py-4 bg-[var(--accent)] text-white text-center rounded-full hover:bg-[#2f9bb3] transition-colors text-lg font-medium"
+                className="px-8 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-2xl hover:shadow-[#FFA36C]/50 transition-all duration-300 text-lg font-bold"
               >
                 회사이념
               </Link>
               <Link
                 href="/about/ceo"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/20 transition-colors text-lg font-medium border border-white/30"
+                className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white text-center rounded-full hover:bg-white/10 transition-all duration-300 text-lg font-medium border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]"
               >
                 대표소개
               </Link>
