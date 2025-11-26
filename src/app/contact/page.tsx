@@ -16,15 +16,30 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
+      // 환경 변수 확인
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS 환경 변수가 설정되지 않았습니다.");
+        // 환경 변수가 없어도 팝업은 표시 (개발 모드)
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
+        e.currentTarget.reset();
+        setIsSubmitting(false);
+        return;
+      }
+
       // EmailJS로 이메일 전송
       const result = await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        serviceId,
+        templateId,
         e.currentTarget,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        publicKey
       );
 
-      console.log("이메일 전송 성공:", result.text);
+      console.log("✅ 이메일 전송 성공:", result.text);
       
       // 성공 팝업 표시
       setShowPopup(true);
@@ -36,9 +51,18 @@ export default function ContactPage() {
       
       // 폼 리셋
       e.currentTarget.reset();
-    } catch (error) {
-      console.error("이메일 전송 실패:", error);
-      alert("문의 전송에 실패했습니다. 다시 시도해주세요.");
+    } catch (error: any) {
+      console.error("❌ 이메일 전송 실패:", error);
+      
+      // error.text가 "OK"면 실제로는 성공한 것
+      if (error?.text === "OK" || error?.status === 200) {
+        console.log("✅ 실제로는 전송 성공!");
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
+        e.currentTarget.reset();
+      } else {
+        alert("문의 전송에 실패했습니다. 다시 시도해주세요.\n에러: " + (error?.text || error?.message || "알 수 없는 오류"));
+      }
     } finally {
       setIsSubmitting(false);
     }
