@@ -1,11 +1,113 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [showSurveyPopup, setShowSurveyPopup] = useState(false);
+
+  useEffect(() => {
+    // 페이지 로드 후 1초 뒤에 팝업 표시
+    const timer = setTimeout(() => {
+      // 오늘 하루 동안 팝업을 보지 않도록 설정했는지 확인
+      const hideUntil = localStorage.getItem("surveyPopupHideUntil");
+      if (!hideUntil || new Date().getTime() > parseInt(hideUntil)) {
+        setShowSurveyPopup(true);
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowSurveyPopup(false);
+  };
+
+  const handleCloseTodayPopup = () => {
+    // 24시간 후까지 팝업 숨기기
+    const tomorrow = new Date().getTime() + 24 * 60 * 60 * 1000;
+    localStorage.setItem("surveyPopupHideUntil", tomorrow.toString());
+    setShowSurveyPopup(false);
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <Navbar />
+
+      {/* 설문조사 팝업 */}
+      {showSurveyPopup && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-[fadeIn_0.3s_ease-in-out]">
+          <div className="bg-white dark:bg-[#15273D] rounded-3xl p-6 sm:p-8 shadow-2xl w-full max-w-lg border-2 border-[#E4C58B]/50 relative">
+            {/* 닫기 버튼 */}
+            <button
+              onClick={handleClosePopup}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors"
+              aria-label="닫기"
+            >
+              <span className="text-2xl text-gray-600 dark:text-white">×</span>
+            </button>
+
+            <div className="text-center">
+              {/* 환영 인사 */}
+              <div className="mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3">
+                  S.R&P에 오신 것을 환영합니다! 🎉
+                </h2>
+                <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  외식업 운영에 대한 귀중한 의견을 듣고 싶습니다.
+                  <br />
+                  설문에 참여해주시면 감사하겠습니다.
+                </p>
+              </div>
+
+              {/* QR 코드 */}
+              <div className="mb-6 flex justify-center">
+                <div className="bg-white p-4 rounded-2xl shadow-lg">
+                  <Image
+                    src="/설문조사.jpg"
+                    alt="설문조사 QR 코드"
+                    width={200}
+                    height={200}
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+
+              {/* 설명 */}
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">
+                QR 코드를 스캔하거나 아래 버튼을 클릭하여<br />
+                설문조사에 참여해주세요. (약 7-10분 소요)
+              </p>
+
+              {/* 버튼들 */}
+              <div className="space-y-3">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScn5M2AJmxheDW8rVNuJHvd5xbyr4PB7VZrWKhS3uwFM7s34g/viewform?pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-6 py-4 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-xl hover:shadow-[#FFA36C]/50 transition-all font-bold text-lg"
+                >
+                  설문조사 참여하기
+                </a>
+                <button
+                  onClick={handleCloseTodayPopup}
+                  className="block w-full px-6 py-3 text-zinc-600 dark:text-zinc-400 text-center text-sm hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
+                >
+                  오늘 하루 보지 않기
+                </button>
+              </div>
+
+              {/* 감사 인사 */}
+              <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
+                귀중한 시간 내어 참여해주셔서 진심으로 감사드립니다. 🙏
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen pt-32 pb-20 overflow-hidden">
