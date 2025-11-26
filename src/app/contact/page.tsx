@@ -15,6 +15,9 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // 폼 참조를 미리 저장 (비동기 처리 중 사라질 수 있음)
+    const form = e.currentTarget;
+
     try {
       // 환경 변수 확인
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -26,7 +29,7 @@ export default function ContactPage() {
         // 환경 변수가 없어도 팝업은 표시 (개발 모드)
         setShowPopup(true);
         setTimeout(() => setShowPopup(false), 3000);
-        e.currentTarget.reset();
+        form?.reset();
         setIsSubmitting(false);
         return;
       }
@@ -35,7 +38,7 @@ export default function ContactPage() {
       const result = await emailjs.sendForm(
         serviceId,
         templateId,
-        e.currentTarget,
+        form,
         publicKey
       );
 
@@ -50,7 +53,7 @@ export default function ContactPage() {
       }, 3000);
       
       // 폼 리셋
-      e.currentTarget.reset();
+      form?.reset();
     } catch (error: any) {
       console.error("❌ 이메일 전송 실패:", error);
       
@@ -59,7 +62,7 @@ export default function ContactPage() {
         console.log("✅ 실제로는 전송 성공!");
         setShowPopup(true);
         setTimeout(() => setShowPopup(false), 3000);
-        e.currentTarget.reset();
+        form?.reset();
       } else {
         alert("문의 전송에 실패했습니다. 다시 시도해주세요.\n에러: " + (error?.text || error?.message || "알 수 없는 오류"));
       }
