@@ -18,6 +18,26 @@ export default function ContactPage() {
     // 폼 참조를 미리 저장 (비동기 처리 중 사라질 수 있음)
     const form = e.currentTarget;
 
+    // 현재 시간 추가
+    const now = new Date();
+    const koreanTime = new Intl.DateTimeFormat('ko-KR', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZone: 'Asia/Seoul'
+    }).format(now);
+
+    // Hidden input으로 접수 시간 추가
+    const timeInput = document.createElement('input');
+    timeInput.type = 'hidden';
+    timeInput.name = 'submit_time';
+    timeInput.value = koreanTime;
+    form.appendChild(timeInput);
+
     try {
       // 환경 변수 확인
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
