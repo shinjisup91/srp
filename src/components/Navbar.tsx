@@ -174,7 +174,6 @@ export default function Navbar() {
                 title="시스템"
                 items={[
                   { label: "전체 시스템 개요", href: "/arss/system" },
-                  { label: "C4BR/BU 소개", href: "/arss/br-tr" },
                 ]}
               />
               <DropdownMenu
@@ -262,7 +261,6 @@ export default function Navbar() {
               title="시스템"
               items={[
                 { label: "전체 시스템 개요", href: "/arss/system" },
-                { label: "C4BR/BU 소개", href: "/arss/br-tr" },
               ]}
               onItemClick={() => setIsMobileMenuOpen(false)}
             />
