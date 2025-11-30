@@ -266,7 +266,6 @@ export default function SystemPage() {
                 잔 감지 센서 기반으로 자동 디스펜싱하여 C4 적재 위치로 전달합니다
               </p>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>• 호시자키 디스펜서 API 연동</li>
                 <li>• 자동 잔 감지 및 디스펜싱</li>
                 <li>• 완성된 잔 자동 전달</li>
               </ul>
