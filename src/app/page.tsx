@@ -148,7 +148,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 md:mt-0">
-              <div className="rounded-2xl overflow-hidden shadow-2xl bg-[#15273D] p-8 md:p-12 flex items-center justify-center"
+              <div className="rounded-2xl flex items-center justify-center"
                 style={{
                   height: "400px",
                 }}
@@ -158,7 +158,7 @@ export default function Home() {
                   alt="S.R&P 로고"
                   width={600}
                   height={500}
-                  className="object-contain w-full h-full"
+                  className="object-contain w-full h-full drop-shadow-2xl"
                   priority
                 />
               </div>
