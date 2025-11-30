@@ -167,14 +167,14 @@ export default function Navbar() {
                 items={[
                   { label: "ARSS 소개", href: "/arss" },
                   { label: "Client 1~4 & Server/Bridge", href: "/arss/system" },
-                  { label: "적용 시나리오", href: "/arss/br-tr" },
+                  { label: "C4BR/BU 레일 시스템", href: "/arss/br-tr" },
                 ]}
               />
               <DropdownMenu
                 title="시스템"
                 items={[
                   { label: "전체 시스템 개요", href: "/arss/system" },
-                  { label: "C4BR 레일 소개", href: "/arss/br-tr" },
+                  { label: "C4BR/BU 소개", href: "/arss/br-tr" },
                 ]}
               />
               <DropdownMenu
@@ -254,7 +254,7 @@ export default function Navbar() {
               items={[
                 { label: "ARSS 소개", href: "/arss" },
                 { label: "Client 1~4 & Server/Bridge", href: "/arss/system" },
-                { label: "적용 시나리오", href: "/arss/br-tr" },
+                { label: "C4BR/BU 레일 시스템", href: "/arss/br-tr" },
               ]}
               onItemClick={() => setIsMobileMenuOpen(false)}
             />
@@ -262,7 +262,7 @@ export default function Navbar() {
               title="시스템"
               items={[
                 { label: "전체 시스템 개요", href: "/arss/system" },
-                { label: "C4BR 레일 소개", href: "/arss/br-tr" },
+                { label: "C4BR/BU 소개", href: "/arss/br-tr" },
               ]}
               onItemClick={() => setIsMobileMenuOpen(false)}
             />

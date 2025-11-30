@@ -15,19 +15,19 @@ export default function BRTRPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
-                BR-TR Technology
+                천장 레일 서빙 시스템의 완성
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                차세대 서빙 로봇
+                C4BR & BU
                 <br />
-                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">BR-TR</span>
+                <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">서빙 레일 시스템</span>
                 <br />
-                시스템
+                공중 레일 위를 달리는 풍선형 서빙 유닛
               </h1>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                Beverage Rail Transport Robot
+                C4BR(순환형 Balloon Rail)과 BU(Balloon Unit)가 결합된 음료 특화 자동 서빙 모듈입니다.
                 <br />
-                음료 전문 레일 운송 로봇으로 더욱 스마트한 서비스를 제공합니다
+                바닥 로봇 없이 천장 레일만으로 매장 전체를 커버하며, QR 주문 시 BU가 테이블까지 직접 가져다줍니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -64,27 +64,27 @@ export default function BRTRPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
-              BR-TR 특장점
+              C4BR/BU 특장점
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-              음료 서빙에 최적화된 전문 솔루션
+              천장 레일 기반 자동 서빙의 핵심 모듈
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <CardWithImage
               imageUrl="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80"
-              title="안정적 운반"
-              description="진동 방지 시스템으로 음료를 흘리지 않고 안전하게 운반합니다"
+              title="음료에 최적화된 안정적 운반"
+              description="진동·쏠림 최소화 구조와 부드러운 가감속으로 500cc 생맥주·칵테일도 코너 구간에서 흘림 없이 도착합니다"
             />
             <CardWithImage
               imageUrl="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80"
-              title="테이블 수에 맞는 개체수"
-              description="매장의 테이블 수와 레이아웃에 최적화된 BR-TR 개체수 배치"
+              title="매장 테이블 수에 맞는 BU 대수 설계"
+              description="매장 평수·테이블 수·동선에 따라 BU 대수를 설계하며, 일반적으로 테이블 수의 절반 수준으로 배치해 회전 효율을 높입니다"
             />
             <CardWithImage
               imageUrl="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80"
-              title="이색적인 경험"
-              description="레일 위를 달리는 BR-TR로 고객에게 특별한 재미와 경험을 제공합니다"
+              title="보는 순간 사진 찍고 싶은 경험"
+              description="천장 레일을 달리는 풍선형 유닛의 비주얼과 LED 연출로 사진·영상 공유를 유도하며 브랜드 스토리를 강화합니다"
             />
           </div>
         </div>
@@ -95,10 +95,10 @@ export default function BRTRPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
-              BR-TR 성능
+              C4BR/BU 성능 지표
             </h2>
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-              성능 지표 목표
+              설계 목표 값 (Version 1 기준)
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
@@ -110,7 +110,7 @@ export default function BRTRPage() {
                 동시 운반
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                최대 수용량
+                1레일 기준 설계 목표
               </div>
             </div>
             <div className="text-center p-6">
@@ -118,10 +118,10 @@ export default function BRTRPage() {
                 0%
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                유출률
+                유출률 목표
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                진동 방지 기술
+                가감속 알고리즘
               </div>
             </div>
             <div className="text-center p-6">
@@ -129,10 +129,10 @@ export default function BRTRPage() {
                 2분
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                평균 서빙
+                평균 서빙 시간
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                주방에서 테이블까지
+                매장 규모에 따라 상이
               </div>
             </div>
             <div className="text-center p-6">
@@ -140,10 +140,10 @@ export default function BRTRPage() {
                 98%
               </div>
               <div className="text-lg text-black dark:text-white font-medium mb-1">
-                가동률
+                시스템 가동률
               </div>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                높은 안정성
+                모듈화 구조 및 유지보수
               </div>
             </div>
           </div>
@@ -165,10 +165,13 @@ export default function BRTRPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              BR-TR로 매장 운영을 혁신하세요
+              C4BR/BU로 매장의 '마지막 10m'를 자동화하세요
             </h2>
-            <p className="text-lg text-white/90 mb-8">
-              실제 데모를 통해 BR-TR의 성능을 직접 확인해보세요
+            <p className="text-lg text-white/90 mb-4">
+              천장 레일 위 풍선 유닛으로, 서빙과 브랜딩을 한 번에 실현합니다.
+            </p>
+            <p className="text-base text-white/80 mb-8">
+              실제 데모·시연을 통해 C4BR/BU 동작을 확인하실 수 있으며, 1호점·파일럿 매장 도입 및 기존 매장 리모델링(천장형/타워형/벽걸이형) 등 다양한 시나리오가 가능합니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
