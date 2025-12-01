@@ -14,20 +14,24 @@ export default function BRTRPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-12rem)]">
             <div>
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-6 backdrop-blur-sm">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#E4C58B]/20 to-[#FFA36C]/20 border border-[#E4C58B]/30 text-[#E4C58B] text-sm font-bold rounded-full mb-8 backdrop-blur-sm">
                 천장 레일 서빙 시스템의 완성
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                 C4BR & BU
                 <br />
                 <span className="bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent">서빙 레일 시스템</span>
-                <br />
-                공중 레일 위를 달리는 풍선형 서빙 유닛
               </h1>
-              <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                C4BR(순환형 Balloon Rail)과 BU(Balloon Unit)가 결합된 음료 특화 자동 서빙 모듈입니다.
-                <br />
-                바닥 로봇 없이 천장 레일만으로 매장 전체를 커버하며, QR 주문 시 BU가 테이블까지 직접 가져다줍니다.
+              <h2 className="text-xl md:text-2xl text-white/95 mb-8 font-medium leading-relaxed">
+                각 테이블을 마크하는<br className="md:hidden" /> 레일 위를 달리는 풍선형 서빙 유닛
+              </h2>
+              <p className="text-lg text-white/85 mb-6 leading-relaxed">
+                C4BR(순환형 Balloon Rail)과 BU(Balloon Unit)가 결합된<br className="hidden md:block" />
+                음료 특화 자동 서빙 모듈입니다.
+              </p>
+              <p className="text-base text-white/80 mb-10 leading-relaxed">
+                바닥 로봇 없이 천장 레일만으로 매장 전체를 커버하며,<br className="hidden md:block" />
+                QR 주문 시 BU가 테이블까지 직접 가져다줍니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -62,11 +66,11 @@ export default function BRTRPage() {
       {/* Quick Overview - 3 Cards */}
       <section className="py-20 bg-zinc-50 dark:bg-zinc-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-6">
               C4BR/BU 특장점
             </h2>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
               천장 레일 기반 자동 서빙의 핵심 모듈
             </p>
           </div>
@@ -93,11 +97,11 @@ export default function BRTRPage() {
       {/* Stats - 4 Indicators */}
       <section className="py-20 bg-white dark:bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-6">
               C4BR/BU 성능 지표
             </h2>
-            <p className="text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
               설계 목표 값 (Version 1 기준)
             </p>
           </div>
@@ -164,14 +168,17 @@ export default function BRTRPage() {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              C4BR/BU로 매장의 '마지막 10m'를 자동화하세요
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+              C4BR/BU로 매장의<br className="md:hidden" /> '마지막 10m'를 자동화하세요
             </h2>
-            <p className="text-lg text-white/90 mb-4">
-              천장 레일 위 풍선 유닛으로, 서빙과 브랜딩을 한 번에 실현합니다.
+            <p className="text-lg md:text-xl text-white/95 mb-6 leading-relaxed">
+              천장 레일 위 풍선 유닛으로,<br className="md:hidden" />
+              서빙과 브랜딩을 한 번에 실현합니다.
             </p>
-            <p className="text-base text-white/80 mb-8">
-              실제 데모·시연을 통해 C4BR/BU 동작을 확인하실 수 있으며, 1호점·파일럿 매장 도입 및 기존 매장 리모델링(천장형/타워형/벽걸이형) 등 다양한 시나리오가 가능합니다.
+            <p className="text-base md:text-lg text-white/80 mb-10 leading-relaxed max-w-2xl mx-auto">
+              실제 데모·시연을 통해 C4BR/BU 동작을 확인하실 수 있으며,<br className="hidden lg:block" />
+              1호점·파일럿 매장 도입 및 기존 매장 리모델링(천장형/타워형/벽걸이형) 등<br className="hidden lg:block" />
+              다양한 시나리오가 가능합니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
