@@ -117,7 +117,7 @@ export default function SystemPage() {
                     <p className="text-xs text-white/60">QR/Web 기반 주문</p>
                   </div>
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
-                    <div className="font-bold text-white text-sm mb-1">Client 2 - 자판기</div>
+                    <div className="font-bold text-white text-sm mb-1">Client 2 - 투출기</div>
                     <p className="text-xs text-white/60">음료 자동 배출</p>
                   </div>
                   <div className="bg-[#15273D]/50 rounded-lg p-3 border border-[#E4C58B]/10">
@@ -239,7 +239,7 @@ export default function SystemPage() {
                 <div className="w-2 h-2 rounded-full bg-[#E4C58B] group-hover:animate-pulse"></div>
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#E4C58B] transition-colors">
-                Client 2 - 음료 자동 자판기 시스템
+                Client 2 - 음료 자동 투출 시스템
               </h3>
               <p className="text-white/60 mb-4 leading-relaxed">
                 병/캔/병음료를 자동으로 배출하여 CB 시작점까지 전달합니다
