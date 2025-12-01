@@ -345,40 +345,102 @@ export default function SystemPage() {
               PRICING PLANS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              매장 규모별 요금제
+              매장 규모만 알면, 대략 견적이 보입니다
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              소규모 펍부터 대형 레스토랑까지, 최적의 패키지를 선택하세요
+            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+              매장 평수와 테이블 수 기준으로 ARSS 도입 시 초기 설치비와 월 예상 비용을 가볍게 계산해보세요.<br />
+              최종 견적은 현장 실측 후 확정됩니다.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {/* Standard */}
-            <div id="pricing-standard" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-8 border-2 border-[#E4C58B]/20 hover:border-[#E4C58B]/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Standard</h3>
-                <p className="text-white/60 text-sm mb-4">소규모 매장</p>
-                <div className="text-4xl font-bold text-[#E4C58B] mb-2">기본형</div>
-                <p className="text-white/50 text-sm">10평 이하</p>
+          {/* Pricing Formula Box */}
+          <div className="max-w-5xl mx-auto mb-12 bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-2xl p-6 border border-[#E4C58B]/30">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-[#E4C58B] mb-3">💰 설치비 공식</h3>
+                <div className="text-sm text-white/80 leading-relaxed space-y-1">
+                  <p className="font-mono">레일 설치비 = 평수 × 50만원</p>
+                  <p className="font-mono">C4 BR/BU 유닛 = ⌈테이블 수 ÷ 2⌉ × 50만원</p>
+                  <p className="text-[#FFA36C] font-semibold mt-2">설치비 ≈ 레일 + 유닛 비용</p>
+                </div>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>Client 1, 3, 4 기본 구성</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>레일 10m 기본 제공</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>태블릿 5대 포함</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>기본 설치 및 교육</span>
-                </li>
-              </ul>
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-[#E4C58B] mb-3">📊 월 운영비 공식</h3>
+                <div className="text-sm text-white/80 leading-relaxed space-y-1">
+                  <p className="font-mono">서버 비용 = 평수 × 5만원</p>
+                  <p className="font-mono">유지보수 = 평수 × 1만원</p>
+                  <p className="text-[#FFA36C] font-semibold mt-2">월 비용 ≈ 서버 + 유지보수</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <p className="text-xs text-white/50 text-center">
+                ※ 실제 견적은 매장 구조·동선·설치 방식(천장형/타워형/벽걸이형)에 따라 달라질 수 있습니다.
+              </p>
+            </div>
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {/* Standard */}
+            <div id="pricing-standard" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-6 border-2 border-[#E4C58B]/20 hover:border-[#E4C58B]/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="text-center mb-5">
+                <h3 className="text-2xl font-bold text-white mb-2">Standard</h3>
+                <p className="text-white/60 text-sm">소규모 펍/바</p>
+              </div>
+              
+              {/* Price Info */}
+              <div className="bg-[#15273D]/60 rounded-xl p-4 mb-5 border border-[#E4C58B]/10">
+                <div className="text-xs text-white/50 mb-1">추천 기준</div>
+                <div className="text-sm text-white/90 font-medium mb-3">10평 이하 · 약 8테이블</div>
+                
+                <div className="space-y-2">
+                  <div>
+                    <div className="text-xs text-[#E4C58B] font-semibold">대략 설치비</div>
+                    <div className="text-xl font-bold text-white">약 700만원</div>
+                    <div className="text-xs text-white/40">레일 500만 + 유닛 200만</div>
+                  </div>
+                  <div className="pt-2 border-t border-white/10">
+                    <div className="text-xs text-[#E4C58B] font-semibold">월 예상 비용</div>
+                    <div className="text-xl font-bold text-white">약 60만원</div>
+                    <div className="text-xs text-white/40">서버 50만 + 유지 10만</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* System Components */}
+              <div className="mb-5">
+                <div className="text-xs text-white/50 mb-2 font-semibold">시스템 구성</div>
+                <ul className="space-y-1.5 text-xs">
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C1 주문 시스템</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C3 생맥주 디스펜서</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C4 BR/BU 레일 서빙</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/40">
+                    <span className="text-white/20">-</span>
+                    <span>C2 음료 배출기 (선택)</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/40">
+                    <span className="text-white/20">-</span>
+                    <span>CS 서버 (선택)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-xs text-white/40 leading-relaxed">
+                  ※ 모든 금액은 예시이며, 현장 조사 후 정확한 견적이 산출됩니다.
+                </p>
+              </div>
+
               <Link
                 href="/contact"
                 className="block w-full px-6 py-3 bg-[#E4C58B]/10 text-[#E4C58B] text-center rounded-full hover:bg-[#E4C58B]/20 transition-colors font-medium border border-[#E4C58B]/30"
@@ -388,35 +450,64 @@ export default function SystemPage() {
             </div>
 
             {/* Deluxe */}
-            <div id="pricing-deluxe" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-8 border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div className="text-center mb-6">
+            <div id="pricing-deluxe" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-6 border-2 border-[#E4C58B]/30 hover:border-[#E4C58B]/60 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="text-center mb-5">
                 <h3 className="text-2xl font-bold text-white mb-2">Deluxe</h3>
-                <p className="text-white/60 text-sm mb-4">중규모 매장</p>
-                <div className="text-4xl font-bold text-[#E4C58B] mb-2">고급형</div>
-                <p className="text-white/50 text-sm">10~30평</p>
+                <p className="text-white/60 text-sm">중규모 레스토랑</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>전체 Client 1~4 구성</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>레일 30m + 커스텀 설계</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>태블릿 10대 포함</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>Client Server 모니터링</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>POS 연동 지원</span>
-                </li>
-              </ul>
+              
+              {/* Price Info */}
+              <div className="bg-[#15273D]/60 rounded-xl p-4 mb-5 border border-[#E4C58B]/10">
+                <div className="text-xs text-white/50 mb-1">추천 기준</div>
+                <div className="text-sm text-white/90 font-medium mb-3">10~30평 · 약 16테이블</div>
+                
+                <div className="space-y-2">
+                  <div>
+                    <div className="text-xs text-[#E4C58B] font-semibold">대략 설치비</div>
+                    <div className="text-xl font-bold text-white">약 1,900만원</div>
+                    <div className="text-xs text-white/40">레일 1,500만 + 유닛 400만</div>
+                  </div>
+                  <div className="pt-2 border-t border-white/10">
+                    <div className="text-xs text-[#E4C58B] font-semibold">월 예상 비용</div>
+                    <div className="text-xl font-bold text-white">약 180만원</div>
+                    <div className="text-xs text-white/40">서버 150만 + 유지 30만</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* System Components */}
+              <div className="mb-5">
+                <div className="text-xs text-white/50 mb-2 font-semibold">시스템 구성</div>
+                <ul className="space-y-1.5 text-xs">
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C1 주문 시스템</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C2 음료 자동 배출기</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C3 생맥주 디스펜서</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C4 BR/BU 레일 서빙</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>CS 통합 관리 서버</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-xs text-white/40 leading-relaxed">
+                  ※ 모든 금액은 예시이며, 현장 조사 후 정확한 견적이 산출됩니다.
+                </p>
+              </div>
+
               <Link
                 href="/contact"
                 className="block w-full px-6 py-3 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-lg transition-all font-bold"
@@ -426,38 +517,67 @@ export default function SystemPage() {
             </div>
 
             {/* Luxury */}
-            <div id="pricing-luxury" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-8 border-2 border-[#FFA36C]/30 hover:border-[#FFA36C]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FFA36C]/30 hover:-translate-y-2 relative overflow-hidden">
+            <div id="pricing-luxury" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-6 border-2 border-[#FFA36C]/30 hover:border-[#FFA36C]/60 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FFA36C]/30 hover:-translate-y-2 relative overflow-hidden">
               <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFA36C] text-[#15273D] text-xs font-bold rounded-full">
                 인기
               </div>
-              <div className="text-center mb-6">
+              <div className="text-center mb-5">
                 <h3 className="text-2xl font-bold text-white mb-2">Luxury</h3>
-                <p className="text-white/60 text-sm mb-4">대규모 매장</p>
-                <div className="text-4xl font-bold text-[#FFA36C] mb-2">프리미엄</div>
-                <p className="text-white/50 text-sm">30~50평</p>
+                <p className="text-white/60 text-sm">대규모 프리미엄 매장</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#FFA36C] mt-0.5">✓</span>
-                  <span>Full System (C1~4, CS, CB)</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#FFA36C] mt-0.5">✓</span>
-                  <span>레일 50m + 복층 설계 가능</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#FFA36C] mt-0.5">✓</span>
-                  <span>태블릿 20대 + 키오스크 2대</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#FFA36C] mt-0.5">✓</span>
-                  <span>실시간 데이터 분석</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#FFA36C] mt-0.5">✓</span>
-                  <span>3개월 무상 A/S</span>
-                </li>
-              </ul>
+              
+              {/* Price Info */}
+              <div className="bg-[#15273D]/60 rounded-xl p-4 mb-5 border border-[#FFA36C]/20">
+                <div className="text-xs text-white/50 mb-1">추천 기준</div>
+                <div className="text-sm text-white/90 font-medium mb-3">30~50평 · 약 24테이블</div>
+                
+                <div className="space-y-2">
+                  <div>
+                    <div className="text-xs text-[#FFA36C] font-semibold">대략 설치비</div>
+                    <div className="text-xl font-bold text-white">약 2,600만원</div>
+                    <div className="text-xs text-white/40">레일 2,000만 + 유닛 600만</div>
+                  </div>
+                  <div className="pt-2 border-t border-white/10">
+                    <div className="text-xs text-[#FFA36C] font-semibold">월 예상 비용</div>
+                    <div className="text-xl font-bold text-white">약 240만원</div>
+                    <div className="text-xs text-white/40">서버 200만 + 유지 40만</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* System Components */}
+              <div className="mb-5">
+                <div className="text-xs text-white/50 mb-2 font-semibold">시스템 구성</div>
+                <ul className="space-y-1.5 text-xs">
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#FFA36C]">✓</span>
+                    <span>Full System (C1~4)</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#FFA36C]">✓</span>
+                    <span>CS 통합 관리 서버</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#FFA36C]">✓</span>
+                    <span>CB 클라이언트 브릿지</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#FFA36C]">✓</span>
+                    <span>인테리어 조명 커스텀</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#FFA36C]">✓</span>
+                    <span>실시간 데이터 분석</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-xs text-white/40 leading-relaxed">
+                  ※ 모든 금액은 예시이며, 현장 조사 후 정확한 견적이 산출됩니다.
+                </p>
+              </div>
+
               <Link
                 href="/contact"
                 className="block w-full px-6 py-3 bg-gradient-to-r from-[#FFA36C] to-[#E4C58B] text-[#15273D] text-center rounded-full hover:shadow-xl hover:shadow-[#FFA36C]/50 transition-all font-bold"
@@ -467,41 +587,64 @@ export default function SystemPage() {
             </div>
 
             {/* Noblesse */}
-            <div id="pricing-noblesse" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-8 border-2 border-[#E4C58B]/40 hover:border-[#E4C58B]/70 transition-all duration-300 hover:shadow-2xl hover:shadow-[#E4C58B]/30 hover:-translate-y-2">
-              <div className="text-center mb-6">
+            <div id="pricing-noblesse" className="bg-gradient-to-br from-[#14273C] to-[#15273D] rounded-3xl p-6 border-2 border-[#E4C58B]/40 hover:border-[#E4C58B]/70 transition-all duration-300 hover:shadow-2xl hover:shadow-[#E4C58B]/30 hover:-translate-y-2">
+              <div className="text-center mb-5">
                 <h3 className="text-2xl font-bold text-white mb-2">Noblesse</h3>
-                <p className="text-white/60 text-sm mb-4">최상급 매장</p>
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] bg-clip-text text-transparent mb-2">
-                  맞춤형
-                </div>
-                <p className="text-white/50 text-sm">50평 이상</p>
+                <p className="text-white/60 text-sm">플래그십 매장</p>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>완전 커스텀 시스템 설계</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>레일 무제한 + 특수 구조 대응</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>기기 무제한 제공</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>AI 기반 운영 최적화</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>1년 전담 매니저 지원</span>
-                </li>
-                <li className="flex items-start gap-2 text-white/70 text-sm">
-                  <span className="text-[#E4C58B] mt-0.5">✓</span>
-                  <span>평생 A/S</span>
-                </li>
-              </ul>
+              
+              {/* Price Info */}
+              <div className="bg-[#15273D]/60 rounded-xl p-4 mb-5 border border-[#E4C58B]/20">
+                <div className="text-xs text-white/50 mb-1">추천 기준</div>
+                <div className="text-sm text-white/90 font-medium mb-3">50평 이상 · 약 32테이블</div>
+                
+                <div className="space-y-2">
+                  <div>
+                    <div className="text-xs text-[#E4C58B] font-semibold">대략 설치비</div>
+                    <div className="text-xl font-bold text-white">약 3,800만원</div>
+                    <div className="text-xs text-white/40">레일 3,000만 + 유닛 800만</div>
+                  </div>
+                  <div className="pt-2 border-t border-white/10">
+                    <div className="text-xs text-[#E4C58B] font-semibold">월 예상 비용</div>
+                    <div className="text-xl font-bold text-white">약 360만원</div>
+                    <div className="text-xs text-white/40">서버 300만 + 유지 60만</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* System Components */}
+              <div className="mb-5">
+                <div className="text-xs text-white/50 mb-2 font-semibold">시스템 구성</div>
+                <ul className="space-y-1.5 text-xs">
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>완전 커스텀 설계</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>Full System + CB</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C4 LED 광고 연출</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>C4 사운드 이벤트</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-white/70">
+                    <span className="text-[#E4C58B]">✓</span>
+                    <span>AI 기반 운영 최적화</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-xs text-white/40 leading-relaxed">
+                  C4BR/BU에 LED·사운드 연출을 더해 브랜드 경험을 극대화하는 플랜입니다.
+                </p>
+              </div>
+
               <Link
                 href="/contact"
                 className="block w-full px-6 py-3 bg-gradient-to-r from-[#E4C58B] to-[#FFA36C] text-[#15273D] text-center rounded-full hover:shadow-xl transition-all font-bold"
@@ -513,7 +656,7 @@ export default function SystemPage() {
 
           <div className="mt-12 text-center">
             <p className="text-white/50 text-sm">
-              * 모든 요금제는 현장 조사 후 최종 견적이 확정됩니다
+              * 모든 요금제는 현장 실측 후 최종 견적이 확정되며, 설치 환경에 따라 금액이 달라질 수 있습니다
             </p>
           </div>
         </div>
