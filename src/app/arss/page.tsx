@@ -27,7 +27,7 @@ export default function ARSSPage() {
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 Automated Rail-based Serving System
                 <br />
-                레일 기반 자동화 서빙 솔루션으로 매장 운영을 혁신합니다
+                레일 기반 자동화 서빙 솔루션으로 매장 운영을 편리하게 합니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
