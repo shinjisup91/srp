@@ -1,15 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 
 interface SurveyNoticeModalProps {
   /** 모달 표시 여부를 외부에서 제어할 때 사용 (선택사항) */
   open?: boolean;
   /** 외부에서 모달 닫기를 제어할 때 사용 (선택사항) */
   onClose?: () => void;
-  /** "설문 참여하기" 버튼 클릭 시 실행할 콜백 (선택사항, 기본: /survey로 이동) */
-  onConfirm?: () => void;
   /** 팝업 제목 (선택사항) */
   title?: string;
   /** 팝업 본문 (선택사항) */
@@ -29,12 +26,10 @@ const STORAGE_KEY_DEFAULT = "surveyNoticeHidden";
 export default function SurveyNoticeModal({
   open: controlledOpen,
   onClose: controlledOnClose,
-  onConfirm,
   title = "안내드립니다",
   message = "S.R&P는 현재 특허 출원 진행 중입니다. 본 설문은 창업·IR 자료로만 활용되며, 투자 유치 이후 사업자 등록 및 본격 운영을 진행할 예정입니다. 참고하시어 설문에 참여해 주시면 감사하겠습니다.",
   storageKey = STORAGE_KEY_DEFAULT,
 }: SurveyNoticeModalProps) {
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [dontShowToday, setDontShowToday] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -161,15 +156,6 @@ export default function SurveyNoticeModal({
     }
   };
 
-  const handleConfirm = () => {
-    if (onConfirm) {
-      onConfirm();
-    } else {
-      router.push("/survey");
-    }
-    handleClose();
-  };
-
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       handleClose();
@@ -248,19 +234,13 @@ export default function SurveyNoticeModal({
           </label>
         </div>
 
-        {/* 버튼 그룹 */}
-        <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
+        {/* 버튼 */}
+        <div className="flex justify-center">
           <button
             onClick={handleClose}
-            className="order-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 sm:order-1 sm:text-base"
+            className="rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-3 text-sm font-medium text-white transition-all hover:from-blue-700 hover:to-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-base"
           >
-            닫기
-          </button>
-          <button
-            onClick={handleConfirm}
-            className="order-1 rounded-lg bg-blue-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:order-2 sm:text-base"
-          >
-            설문 참여하기
+            확인
           </button>
         </div>
       </div>
