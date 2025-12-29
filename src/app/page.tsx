@@ -5,22 +5,48 @@ import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import SurveyNoticeModal from "@/components/SurveyNoticeModal";
 
 export default function Home() {
+  const [showNoticeModal, setShowNoticeModal] = useState(false);
   const [showSurveyPopup, setShowSurveyPopup] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // 페이지 로드 후 1초 뒤에 팝업 표시
-    const timer = setTimeout(() => {
-      // 오늘 하루 동안 팝업을 보지 않도록 설정했는지 확인
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    // 안내 모달이 표시되어야 하는지 확인
+    const noticeHiddenUntil = localStorage.getItem("surveyNoticeHidden");
+    const shouldShowNotice = !noticeHiddenUntil || new Date() > new Date(noticeHiddenUntil);
+
+    if (shouldShowNotice) {
+      // 안내 모달을 먼저 표시
+      setShowNoticeModal(true);
+    } else {
+      // 안내 모달을 건너뛰고 설문 팝업 체크
+      checkAndShowSurveyPopup();
+    }
+  }, [mounted]);
+
+  const checkAndShowSurveyPopup = () => {
+    // 약간의 딜레이 후 설문 팝업 표시
+    setTimeout(() => {
       const hideUntil = localStorage.getItem("surveyPopupHideUntil");
       if (!hideUntil || new Date().getTime() > parseInt(hideUntil)) {
         setShowSurveyPopup(true);
       }
-    }, 1000);
+    }, 500);
+  };
 
-    return () => clearTimeout(timer);
-  }, []);
+  const handleNoticeModalClose = () => {
+    setShowNoticeModal(false);
+    // 안내 모달이 닫히면 설문 팝업 체크
+    checkAndShowSurveyPopup();
+  };
 
   const handleClosePopup = () => {
     setShowSurveyPopup(false);
@@ -37,7 +63,15 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-black">
       <Navbar />
 
-      {/* 설문조사 팝업 */}
+      {/* 1. 안내 팝업 (새로운 컴포넌트) */}
+      {mounted && (
+        <SurveyNoticeModal
+          open={showNoticeModal}
+          onClose={handleNoticeModalClose}
+        />
+      )}
+
+      {/* 2. 설문조사 QR 팝업 (기존) */}
       {showSurveyPopup && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-[fadeIn_0.3s_ease-in-out]">
           <div className="bg-white dark:bg-[#15273D] rounded-3xl p-6 sm:p-8 shadow-2xl w-full max-w-lg border-2 border-[#E4C58B]/50 relative">
