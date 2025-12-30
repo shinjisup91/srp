@@ -15,10 +15,10 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // 폼 참조를 미리 저장 (비동기 처리 중 사라질 수 있음)
+    // 폼 참조를 미리 저장
     const form = e.currentTarget;
 
-    // 현재 시간 추가
+    // 현재 시간을 한국 시간으로 포맷
     const now = new Date();
     const koreanTime = new Intl.DateTimeFormat('ko-KR', {
       year: 'numeric',
@@ -30,13 +30,6 @@ export default function ContactPage() {
       hour12: false,
       timeZone: 'Asia/Seoul'
     }).format(now);
-
-    // Hidden input으로 접수 시간 추가
-    const timeInput = document.createElement('input');
-    timeInput.type = 'hidden';
-    timeInput.name = 'submit_time';
-    timeInput.value = koreanTime;
-    form.appendChild(timeInput);
 
     try {
       // 환경 변수 확인
@@ -54,11 +47,22 @@ export default function ContactPage() {
         return;
       }
 
-      // EmailJS로 이메일 전송
-      const result = await emailjs.sendForm(
+      // FormData에서 직접 템플릿 파라미터 생성
+      const formData = new FormData(form);
+      const templateParams = {
+        user_name: formData.get('user_name'),
+        user_phone: formData.get('user_phone'),
+        user_email: formData.get('user_email'),
+        store_name: formData.get('store_name') || '(미입력)',
+        message: formData.get('message'),
+        submit_time: koreanTime // 접수 시간을 명시적으로 추가
+      };
+
+      // EmailJS로 이메일 전송 (send 메서드 사용)
+      const result = await emailjs.send(
         serviceId,
         templateId,
-        form,
+        templateParams,
         publicKey
       );
 
